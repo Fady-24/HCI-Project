@@ -1,14 +1,39 @@
-body{
+
+
+#hb{
     background-image: url("Background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'DM sans';
+    font-weight: bold;
     
 
 
     
+}
+#abt{
+    
+    background-color: #eaeaea;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0%;
+    font-family:'DM sans';
+    font-weight: bold;
+    
+
+
+    
+}
+#p1{
+    color:black
+
+
+}
+.iframe{
+    margin-left: 220;
 }
 .fixed-nav {
     position: fixed;
@@ -27,7 +52,7 @@ body{
     border:transparent;
     background-color: rgba(0, 0, 0, 0.831);
     padding: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'DM Sans';
     justify-content: flex-end;
    
 }
@@ -36,43 +61,65 @@ body{
 .nav-menu li a {
     text-decoration: none;
     color: #fdfcfc; 
-    font-weight: bold;
     padding: 5px 10px;
+
+    font-weight: lighter;
+    transform: scale(1);
+    transition: all 0.3s ease;
    
     
 }
 
-
 .nav-menu li a:hover {
+
     color: #f3f6f7; 
-    text-decoration: underline; 
+    font-weight: 700;
+    transform: scale(1.02);
+
+
+}
+h1{
+    margin-left: 50px;
+    font-size: 45px;
+}
+#branch{
+    margin-top: 50px;
+    text-align: left;
+}
+iframe{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 p{
     color: white;
-    font-size: 80px;
-    margin-left: 90px;
-    margin-top: 380px;
+    font-size: 60px;
+    margin-left: 120px;
+    
+}
+#main{
+    margin-top: 350px;
 }
 
 #button{
     background-color: #f3f6f7; 
     color: white; 
-    padding: 20px 30px;
-    font-size: 30px;
+    padding: 15px 20px;
+    font-size: 25px;
     cursor: pointer;
-    border-radius: 10px; 
+    border-radius: 15px; 
     background-color: transparent;
     border-style: solid;
     border-color: white;
-    margin-left: 30px; 
-    margin-bottom: 30px;
+    margin-left: 25px; 
+    margin-bottom: 20px;
+    transition : all 0.5s;
 
 }
 #button:hover{
     color: #111212; 
-    text-decoration: underline; 
-    background-color: #f3f6f793;
+    background-color: #ffffff;
 }
 
 #logo{
@@ -86,3 +133,79 @@ p{
 
 
 }
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .left,
+  .right {
+    flex: 1;
+    min-width: 300px;
+  }
+  .team-list {
+    margin-top: 20px;
+  }
+  
+  .team-member {
+    display:flex;
+    font-size: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+    margin: 8px 0;
+  }  
+
+  #about_us{
+    background-color: #eaeaea;
+    color: #111212;
+  }
+  #about{
+    color: #111212;
+  }
+  #photo{
+    padding-top: 60px;
+    padding-left: 90px;
+    margin-left: 30px;
+    display: inline-block;
+  }
+ 
+  .scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+
+  .section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    font-size: 2rem;
+    color: white;
+  }
+  #small{
+    font-size: 25px;
+    margin-left: 110px;
+    font-family: 'DM sans';
+    font-weight: 500;
+    color: #111212;
+  } 
+  #names{
+    margin-left: 90px;
+    display: inline-block;
+    color: #111212;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.5;
+
+  }
+  #loc{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    z-index: 10;
+
+  }
