@@ -134,7 +134,7 @@ p{
   max-width: 1000px;
   margin: auto;
   background: transparent;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .swiper-slide {
@@ -148,7 +148,7 @@ p{
   width:80%;
   max-width: 200px;
   height: auto;
-  border-radius: 8px;
+ 
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -162,7 +162,9 @@ p{
   color: whitesmoke;
 }
 
-.swiper-pagination-bullet {
-  background: whitesmoke;
+.swiper-pagination-bullet{
+  height: 4px;
+  width: 26px;
+  border-radius: 25px;
+  background: white;
 }
-
