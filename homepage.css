@@ -1,7 +1,7 @@
 
 
 #hb{
-    background-image: url("Background.png");
+    background-image: url("./Pictures/Background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -209,3 +209,5 @@ p{
     z-index: 10;
 
   }
+
+

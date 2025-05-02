@@ -1,0 +1,170 @@
+body {
+  background-color: #252525;
+  background-image: url("./Pictures/greybg.jpg");
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.fixed-nav {
+  position: fixed;
+  right: 20px; 
+  top: 20px;  
+  z-index: 1000; 
+  
+}
+#logo{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: auto;
+  transform: scale(0.6); 
+  height: 30px;
+  width: auto;
+
+
+}
+
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  gap: 20px; 
+  border:transparent;
+  background-color: rgba(0, 0, 0, 0.831);
+  padding: 10px;
+  font-family: 'DM Sans';
+  justify-content: flex-end;
+ 
+}
+
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #fdfcfc; 
+  padding: 5px 10px;
+
+  font-weight: lighter;
+  transform: scale(1);
+  transition: all 0.3s ease;
+ 
+  
+}
+
+.nav-menu li a:hover {
+
+  color: #f3f6f7; 
+  font-weight: 700;
+  transform: scale(1.02);
+
+
+}
+
+.section-text{
+
+  display: inline-block;
+}
+h1{
+  font-family: "DM Sans";
+  margin-left: 20%;
+  padding: 2px;
+  font-weight: bolder;
+  color: #f3f6f7;
+}
+.filter{
+
+  font-family: "DM Sans";
+  font-weight: bold;
+  color: whitesmoke;
+  width: 50%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 10px;
+}
+p{
+  font-size: larger;
+  color: whitesmoke;
+  margin-left: 20%;
+  text-align: left;
+}
+
+.big-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+.btn {
+  background-color: transparent;
+  color: white;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+.btn-check:checked + .btn {
+ border-width: 1px;
+
+  color: black;
+  background-color: whitesmoke;
+
+  border-color: whitesmoke;
+}
+.filter {
+  
+  grid-column: span 5 / span 5;
+}
+
+.section-text {
+  margin-top: 15%;
+  text-align: left;
+  grid-row: span 4 / span 4;
+  grid-row-start: 2;
+}
+
+.swiper {
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
+  grid-row-start: 2;
+}
+      
+
+.swiper {
+  
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  background: transparent;
+  padding: 40px 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.book-cover {
+  width:80%;
+  max-width: 200px;
+  height: auto;
+ 
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover:hover {
+  transform: scale(1.05);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: whitesmoke;
+}
+
+.swiper-pagination-bullet{
+  height: 4px;
+  width: 26px;
+  border-radius: 25px;
+  background: white;
+}
