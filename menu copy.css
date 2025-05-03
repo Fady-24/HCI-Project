@@ -145,7 +145,7 @@ p{
 }
 
 .book-cover {
-  width: 80%;
+  width:80%;
   max-width: 200px;
   height: auto;
  
@@ -168,28 +168,4 @@ p{
   width: 26px;
   border-radius: 25px;
   background: white;
-}
-
-.swiper-slide h3 {
-  font-family: "DM Sans";
-  font-size: 16px;
-  color: whitesmoke;
-  margin: 15px 0 10px 0;
-  text-align: center;
-  max-width: 200px; 
-  margin-left: auto; 
-  margin-right: auto;
-}
-
-.swiper-slide p {
-  font-family: "DM Sans";
-  font-size: 14px;
-  color: #d3d3d3;
-  margin: 8px 0;
-  text-align: center;
-  line-height: 1.5;
-  padding: 0 10px;
-  max-width: 200px; 
-  margin-left: auto;
-  margin-right: auto;
 }
