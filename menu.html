@@ -19,7 +19,7 @@
 
     <ul class="nav-menu">
         <li id="logo"> <img src="./Pictures/LOGO SMALL.png" alt="eLibrary Logo"></li>
-        <li><a href="#">Home</a></li>
+        <li><a href="homepage.html">Home</a></li>
         <li><a href="#">Menu</a></li>
         <li><a href="reviewpage.html">Review</a></li>
         <li><a href="Aboutuspage.html">About Us</a></li>
@@ -27,29 +27,28 @@
 </nav>
 
 
- 
- <div class="big-wrapper">
-  <div class="filter">
-    <input type="radio" class="btn-check" name="options-base" id="option5"  checked>
-  <label class="btn" for="option5">All</label>
-  
-  <input type="radio" class="btn-check" name="options-base" id="option6" >
-  <label class="btn" for="option6">Self-Help</label>
-  
-  <input type="radio" class="btn-check" name="options-base" id="option7"  >
-  <label class="btn" for="option7">Mystery</label>
-  
-  <input type="radio" class="btn-check" name="options-base" id="option8" >
-  <label class="btn" for="option8">Romance</label>
-    </div>
-  
+<div class="filter">
+  <input type="radio" class="btn-check" name="options-base" id="option5"  checked onclick="showGenre('all')">
+<label class="btn" for="option5">All</label>
 
+<input type="radio" class="btn-check" name="options-base" id="option6" onclick="showGenre('self-help')">
+<label class="btn" for="option6">Self-Help</label>
 
+<input type="radio" class="btn-check" name="options-base" id="option7"  onclick="showGenre('mystery')">
+<label class="btn" for="option7">Mystery</label>
+
+<input type="radio" class="btn-check" name="options-base" id="option8" onclick="showGenre('romance')">
+<label class="btn" for="option8">Romance</label>
+  </div>
+
+<div id="allbooks">
+ <div class="big-wrapper" data-genre="self-help">
  <div class="section-text">
   <h1>Self-Help</h1>
   <p>Empower Your Mind, Transform Your Life.</p>
  </div>
   <div class="swiper">
+    <div><img src="./Pictures/shelf.png" class="shelf"></div>
     <div class="swiper-wrapper">
       <!-- Slides (add as many as you want) -->
       <div class="swiper-slide">
@@ -80,12 +79,13 @@
       <div class="swiper-pagination"></div>
  </div>
 </div>
-<div class="big-wrapper">
+<div class="big-wrapper" data-genre="mystery">
   <div class="section-text">
     <h1>Mystery</h1>
     <p>Unlock the Secrets, One Page at a Time.</p>
    </div>
     <div class="swiper">
+      <div><img src="./Pictures/shelf.png" class="shelf"></div>
       <div class="swiper-wrapper">
         <!-- Slides (add as many as you want) -->
         <div class="swiper-slide">
@@ -117,12 +117,13 @@
    </div>
 
 </div>
-<div class="big-wrapper">
+<div class="big-wrapper" data-genre="romance">
   <div class="section-text">
     <h1>Romance</h1>
     <p>Fall in Love with Every Chapter.</p>
    </div>
     <div class="swiper">
+      <div><img src="./Pictures/shelf.png" class="shelf"></div>
       <div class="swiper-wrapper">
         <!-- Slides (add as many as you want) -->
         <div class="swiper-slide">
@@ -153,6 +154,7 @@
         <div class="swiper-pagination"></div>
    </div>
 
+</div>
 </div>
       
       
