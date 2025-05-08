@@ -1,0 +1,146 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-image: url("./Pictures/bg.png");
+    background-size: cover;
+}
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    animation: floatIn 0.5s ease forwards;
+}
+
+
+.logo img {
+    width: 200px;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Main Layout */
+.book-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100vh - 80px);
+    padding: 0 50px;
+    position: relative;
+    animation: floatIn 0.8s ease forwards;
+}
+
+.back-btn {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.description {
+    color: #aaa;
+}
+
+.back-btn:hover {
+    color: #aaa;
+}
+
+.book-details {
+    flex: 1;
+    max-width: 600px;
+}
+
+.title {
+    font-size: 3.3rem;
+    margin: 0 0 20px;
+    line-height: 1.1;
+    max-width: 500px;
+}
+
+.meta {
+    display: flex;
+    gap: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #aaa;
+    font-weight: 600;
+    gap: 35px;
+
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Stacked download button */
+.download-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    padding: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    border-color: #ccc;
+}
+
+.download-icon {
+    width: 32px;
+    height: auto;
+}
+
+.download-text {
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+
+.book-cover img {
+    
+    max-width: 500px;
+    border-radius: 10px;
+    margin-left: 200px;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
