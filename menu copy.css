@@ -1,6 +1,6 @@
 body {
   background-color: #252525;
-  background-image: url("./Pictures/bgtry.png");
+  background-image: url("./Pictures/greybg.jpg");
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -61,7 +61,7 @@ body {
 }
 
 .section-text{
-  padding-top: 7%;
+
   display: inline-block;
 }
 h1{
@@ -80,8 +80,7 @@ h1{
   display: flex;
   margin: auto;
   justify-content: center;
-  padding: 5px;
-  margin-top: 1%;
+  padding: 10px;
 }
 p{
   font-size: larger;
@@ -93,10 +92,8 @@ p{
 .big-wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1.5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 8px;
-  padding-bottom: 5%;
-  transition: opacity 0.3s ease;
 }
 .btn {
   background-color: transparent;
@@ -111,6 +108,10 @@ p{
   background-color: whitesmoke;
 
   border-color: whitesmoke;
+}
+.filter {
+  
+  grid-column: span 5 / span 5;
 }
 
 .section-text {
@@ -144,7 +145,7 @@ p{
 }
 
 .book-cover {
-  width: 80%;
+  width:80%;
   max-width: 200px;
   height: auto;
  
@@ -163,78 +164,8 @@ p{
 }
 
 .swiper-pagination-bullet{
-  
   height: 4px;
   width: 26px;
   border-radius: 25px;
   background: white;
-}
-
-
-.swiper-slide h3 {
-  font-family: "DM Sans";
-  font-size: 16px;
-  color: whitesmoke;
-  margin: 15px 0 10px 0;
-  text-align: center;
-  max-width: 200px; 
-  margin-left: auto; 
-  margin-right: auto;
-}
-
-.swiper-slide p {
-  font-family: "DM Sans";
-  font-size: 14px;
-  color: #d3d3d3;
-  margin: 8px 0;
-  text-align: center;
-  line-height: 1.5;
-  padding: 0 10px;
-  max-width: 200px; 
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@keyframes floatIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.big-wrapper.show {
-  display: grid;
-  animation: floatIn 0.5s ease forwards;
-}
-.shelf {
-  position: absolute;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  bottom: 0;
-  width: 95%;
-  height: 40px;
-  background: linear-gradient(to bottom, #555, #222);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-  border-radius: 10px;
-  z-index: 1;
-}
- 
-.swiper-slide h3 {
-  font-family: "DM Sans";
-  font-size: 15px;
-  color: whitesmoke;
-  margin: 10px 0 5px 0;
-  text-align: center;
-}
-
-.swiper-slide p {
-  font-family: "DM Sans";
-  font-size: 14px;
-  color: #d3d3d3;
-  margin: 5px 0;
-  text-align: center;
-  line-height: 1.4;
 }
