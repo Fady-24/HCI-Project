@@ -5,19 +5,21 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
 .fixed-nav {
   position: fixed;
-  right: 20px; 
-  top: 20px;  
-  z-index: 1000; 
-  
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+
 }
-#logo{
+
+#logo {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-right: auto;
-  transform: scale(0.6); 
+  transform: scale(0.6);
   height: 30px;
   width: auto;
 
@@ -28,50 +30,52 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; 
-  gap: 20px; 
-  border:transparent;
+  display: flex;
+  gap: 20px;
+  border: transparent;
   background-color: rgba(0, 0, 0, 0.831);
   padding: 10px;
   font-family: 'DM Sans';
   justify-content: flex-end;
- 
+
 }
 
 
 .nav-menu li a {
   text-decoration: none;
-  color: #fdfcfc; 
+  color: #fdfcfc;
   padding: 5px 10px;
 
   font-weight: lighter;
   transform: scale(1);
   transition: all 0.3s ease;
- 
-  
+
+
 }
 
 .nav-menu li a:hover {
 
-  color: #f3f6f7; 
+  color: #f3f6f7;
   font-weight: 700;
   transform: scale(1.02);
 
 
 }
 
-.section-text{
+.section-text {
   padding-top: 7%;
   display: inline-block;
 }
-h1{
+
+h1 {
   font-family: "DM Sans";
   margin-left: 20%;
   padding: 2px;
   font-weight: bolder;
   color: #f3f6f7;
 }
-.filter{
+
+.filter {
 
   font-family: "DM Sans";
   font-weight: bold;
@@ -83,7 +87,8 @@ h1{
   padding: 5px;
   margin-top: 1%;
 }
-p{
+
+p {
   font-size: larger;
   color: whitesmoke;
   margin-left: 20%;
@@ -98,14 +103,16 @@ p{
   padding-bottom: 5%;
   transition: opacity 0.3s ease;
 }
+
 .btn {
   background-color: transparent;
   color: white;
   padding: 8px 20px;
   cursor: pointer;
 }
-.btn-check:checked + .btn {
- border-width: 1px;
+
+.btn-check:checked+.btn {
+  border-width: 1px;
 
   color: black;
   background-color: whitesmoke;
@@ -125,10 +132,10 @@ p{
   grid-row: span 4 / span 4;
   grid-row-start: 2;
 }
-      
+
 
 .swiper {
-  
+
   width: 80%;
   max-width: 1000px;
   margin: auto;
@@ -147,10 +154,9 @@ p{
   width: 80%;
   max-width: 200px;
   height: auto;
- 
+
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  
 }
 
 .book-cover:hover {
@@ -162,37 +168,12 @@ p{
   color: whitesmoke;
 }
 
-.swiper-pagination-bullet{
-  
+.swiper-pagination-bullet {
+
   height: 4px;
   width: 26px;
   border-radius: 25px;
   background: white;
-}
-
-
-.swiper-slide h3 {
-  font-family: "DM Sans";
-  font-size: 16px;
-  color: whitesmoke;
-  margin: 15px 0 10px 0;
-  text-align: center;
-  max-width: 200px; 
-  margin-left: auto; 
-  margin-right: auto;
-}
-
-.swiper-slide p {
-  font-family: "DM Sans";
-  font-size: 14px;
-  color: #d3d3d3;
-  margin: 8px 0;
-  text-align: center;
-  line-height: 1.5;
-  padding: 0 10px;
-  max-width: 200px; 
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @keyframes floatIn {
@@ -200,15 +181,18 @@ p{
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .big-wrapper.show {
   display: grid;
   animation: floatIn 0.5s ease forwards;
 }
+
 .shelf {
   position: absolute;
   margin-left: 20px;
@@ -217,24 +201,7 @@ p{
   width: 95%;
   height: 40px;
   background: linear-gradient(to bottom, #555, #222);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   z-index: 1;
-}
- 
-.swiper-slide h3 {
-  font-family: "DM Sans";
-  font-size: 15px;
-  color: whitesmoke;
-  margin: 10px 0 5px 0;
-  text-align: center;
-}
-
-.swiper-slide p {
-  font-family: "DM Sans";
-  font-size: 14px;
-  color: #d3d3d3;
-  margin: 5px 0;
-  text-align: center;
-  line-height: 1.4;
 }
