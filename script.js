@@ -190,7 +190,10 @@ const books = [
     { id: 9, title: "This Could Be Us", genre: "romance", image: "./Pictures/book9.png", url: "this-could-be-us-1.html" },
     { id: 10, title: "For You I'd Break", genre: "romance", image: "./Pictures/book10.png", url: "for-you-id-break.html" },
     { id: 11, title: "Until Love Sets Us Apart", genre: "romance", image: "./Pictures/book11.png", url: "until-love-sets-us-apart.html" },
-    { id: 12, title: "Only Love Can Hurt Like This", genre: "romance", image: "./Pictures/book12.png", url: "only-love-can-hurt-like-this.html" }
+    { id: 12, title: "Only Love Can Hurt Like This", genre: "romance", image: "./Pictures/book12.png", url: "only-love-can-hurt-like-this.html" },
+    { id: 13, title: "Steve Jobs", genre: "Biography", image: "./Pictures/stevejobs.png", url: "stevejobs.html" },
+    { id: 14, title: "American Prometheus", genre: "Biography", image: "./Pictures/americanprom.png", url: "americanpromethus.html" },
+    { id: 15, title: "Alex Ferguson: My Autobiography", genre: "Biography", image: "./Pictures/AlexFerg.png", url: "siralex.html" }
 ];
 
 // Get DOM elements

@@ -29,26 +29,30 @@
     </ul>
   </nav>
 
+  <div class="filter-search-container">
+    <div class="filter">
+      <input type="radio" class="btn-check" name="options-base" id="option5" checked onclick="showGenre('all')">
+      <label class="btn" for="option5">All</label>
 
+      <input type="radio" class="btn-check" name="options-base" id="option6" onclick="showGenre('self-help')">
+      <label class="btn" for="option6">Self-Help</label>
 
-  <div class="filter">
-    <input type="radio" class="btn-check" name="options-base" id="option5" checked onclick="showGenre('all')">
-    <label class="btn" for="option5">All</label>
+      <input type="radio" class="btn-check" name="options-base" id="option7" onclick="showGenre('mystery')">
+      <label class="btn" for="option7">Mystery</label>
 
-    <input type="radio" class="btn-check" name="options-base" id="option6" onclick="showGenre('self-help')">
-    <label class="btn" for="option6">Self-Help</label>
+      <input type="radio" class="btn-check" name="options-base" id="option8" onclick="showGenre('romance')">
+      <label class="btn" for="option8">Romance</label>
 
-    <input type="radio" class="btn-check" name="options-base" id="option7" onclick="showGenre('mystery')">
-    <label class="btn" for="option7">Mystery</label>
+      <input type="radio" class="btn-check" name="options-base" id="option9" onclick="showGenre('biography')">
+      <label class="btn" for="option9">Biography</label>
+    </div>
 
-    <input type="radio" class="btn-check" name="options-base" id="option8" onclick="showGenre('romance')">
-    <label class="btn" for="option8">Romance</label>
-  </div>
-  <div class="search-container">
-    <input type="text" class="search-input" placeholder="Search books...">
-    <i class="fas fa-search search-icon"></i>
-    <div class="search-dropdown" id="search-dropdown">
-      <!-- Results will appear here -->
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search books...">
+      <i class="fas fa-search search-icon"></i>
+      <div class="search-dropdown" id="search-dropdown">
+        <!-- Results will appear here -->
+      </div>
     </div>
   </div>
 
@@ -165,6 +169,39 @@
         <div class="swiper-pagination"></div>
       </div>
 
+    </div>
+    <div class="big-wrapper" data-genre="biography">
+      <div class="section-text">
+        <h1>Biography</h1>
+        <p>Moments that Matter, Stories that Last.</p>
+      </div>
+      <div class="swiper">
+        <div><img src="./Pictures/shelf.png" class="shelf"></div>
+        <div class="swiper-wrapper">
+          <!-- Slides (add as many as you want) -->
+          <div class="swiper-slide">
+            <a href="stevejobs.html" target="_blank">
+              <img src="./Pictures/stevejobs.png" class="book-cover" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="americanpromethus.html" target="_blank">
+              <img src="./Pictures/americanprom.png" class="book-cover" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="siralex.html" target="_blank">
+              <img src="./Pictures/AlexFerg.png" class="book-cover" />
+            </a>
+          </div>
+        
+          <!-- Add more slides as needed -->
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
   </div>
 
