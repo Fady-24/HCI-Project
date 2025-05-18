@@ -22,9 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 4. Star rating functionality
     stars.forEach(star => {
-        star.style.fontSize = '40px';
         star.style.margin = '0 5px';
-
         star.addEventListener('click', function () {
             currentRating = parseInt(this.getAttribute('data-rating'));
             updateStarDisplay();
@@ -88,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function loadReviews() {
         const savedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
-        savedReviews.forEach(review => {
+        savedReviews.reverse().forEach(review => {
             displayReview(review);
         });
     }
@@ -129,28 +127,13 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 20,
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
     },
     pagination: {
-      el: '.swiper-pagination',
-      clickable: true
+        el: '.swiper-pagination',
+        clickable: true
     }
-  });
+});
 
-  function showGenre(genre) {
-    const wrappers = document.querySelectorAll('.big-wrapper');
-    wrappers.forEach(wrapper => {
-      const genreType = wrapper.getAttribute('data-genre');
-      if (genre === 'all' || genreType === genre) {
-        wrapper.style.display="grid";
-        wrapper.classList.remove('show'); 
-        void wrapper.offsetWidth; 
-        wrapper.classList.add('show');
-      } else {
-        wrapper.classList.remove('show');
-        wrapper.style.display = 'none';
-      }
-    });
-  }
-  
+

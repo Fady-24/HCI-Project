@@ -81,15 +81,18 @@ body {
 }
 
 .star {
-    font-size: 30px;
+    font-size: 35px;
     color: #ccc;
     cursor: pointer;
-    transition: color 0.2s;
+    transition: font-size 0.2s;
 }
 
 .star:hover,
-.star.active {
+.star.active,
+.star.hovered,
+.star.selected {
     color: #ffcc00;
+    font-size: 40px;
 }
 
 .container {
