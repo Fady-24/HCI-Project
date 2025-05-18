@@ -80,7 +80,7 @@ h1 {
   font-family: "DM Sans";
   font-weight: bold;
   color: whitesmoke;
-  width: 50%;
+  width: 100%;
   display: flex;
   margin: auto;
   justify-content: center;
@@ -102,6 +102,12 @@ p {
   gap: 8px;
   padding-bottom: 5%;
   transition: opacity 0.3s ease;
+}
+.filter .btn:hover {
+  color: #fff;
+  background-color: #222; /* or keep it transparent if you prefer */
+  box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.5); /* purple glow, adjust color as you like */
+  transition: box-shadow 0.3s, background 0.3s, color 0.3s;
 }
 
 .btn {
@@ -208,23 +214,21 @@ p {
 
 .filter-search-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  max-width: 1200px;
+  gap: 40px;
+  padding: 20px 0;
+  width: fit-content;
   margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .search-container {
   position: relative;
-  width: 300px;
+  margin-top: 15px;
+  width: 500px;
 }
 
 .search-input {
-  position: relative;
-  left: 1300px;
   width: 100%;
   padding: 10px 40px 10px 15px;
   border: 1px solid #444;
@@ -242,13 +246,12 @@ p {
 }
 
 .search-input:focus {
-  border-color: #7e57c2;
-  box-shadow: 0 0 8px rgba(126, 87, 194, 0.4);
+  border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .search-icon {
   position: absolute;
-  left: 1560px;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
@@ -258,7 +261,6 @@ p {
 
 .search-dropdown {
   position: absolute;
-  left: 1300px;
   width: 100%;
   max-height: 300px;
   overflow-y: auto;
