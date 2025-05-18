@@ -30,6 +30,7 @@
   </nav>
 
 
+
   <div class="filter">
     <input type="radio" class="btn-check" name="options-base" id="option5" checked onclick="showGenre('all')">
     <label class="btn" for="option5">All</label>
@@ -43,6 +44,13 @@
     <input type="radio" class="btn-check" name="options-base" id="option8" onclick="showGenre('romance')">
     <label class="btn" for="option8">Romance</label>
   </div>
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search books...">
+    <i class="fas fa-search search-icon"></i>
+    <div class="search-dropdown" id="search-dropdown">
+      <!-- Results will appear here -->
+    </div>
+  </div>
 
   <div id="allbooks">
     <div class="big-wrapper" data-genre="self-help">
@@ -55,7 +63,7 @@
         <div class="swiper-wrapper">
           <!-- Slides (add as many as you want) -->
           <div class="swiper-slide">
-            <a href="book1.html">
+            <a href="book1.html" target="_blank">
               <img src="./Pictures/book1.png" class="book-cover" />
             </a>
           </div>
