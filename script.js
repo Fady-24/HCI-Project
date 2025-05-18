@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const stars = document.querySelectorAll('.star');
     const reviewInput = reviewForm.querySelector('input[type="text"]');
     let currentRating = 0;
+    let submitted = false; // Moved inside the DOMContentLoaded scope
 
     // 2. Fix form positioning
     reviewForm.style.transform = 'none';
@@ -21,10 +22,29 @@ document.addEventListener('DOMContentLoaded', function () {
     loadReviews();
 
     // 4. Star rating functionality
-    stars.forEach(star => {
+    stars.forEach((star, index) => {
         star.style.margin = '0 5px';
+
+        // Handle click
         star.addEventListener('click', function () {
+            if (submitted) return;
             currentRating = parseInt(this.getAttribute('data-rating'));
+            updateStarDisplay();
+        });
+
+        // Handle hover
+        star.addEventListener('mouseenter', function () {
+            if (submitted) return;
+            const hoverRating = parseInt(this.getAttribute('data-rating'));
+            stars.forEach((s, i) => {
+                s.classList.toggle('hover', i < hoverRating);
+            });
+        });
+
+        // Handle mouse leave
+        star.addEventListener('mouseleave', function () {
+            if (submitted) return;
+            stars.forEach(s => s.classList.remove('hover'));
             updateStarDisplay();
         });
     });
@@ -46,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             date: new Date().toISOString()
         };
 
+        submitted = true;
         saveReview(review);
         displayReview(review);
         resetForm();
@@ -110,6 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
         reviewElement.querySelectorAll('.review-rating .star').forEach(star => {
             star.style.fontSize = '30px';
             star.style.margin = '0 3px';
+            // Disable any hover effects on displayed reviews
+            star.style.pointerEvents = 'none';
         });
 
         reviewsContainer.prepend(reviewElement);
@@ -118,9 +141,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function resetForm() {
         reviewInput.value = '';
         currentRating = 0;
+        submitted = false; // Reset the submitted flag
         updateStarDisplay();
     }
 });
+
+// Moved this inside the DOMContentLoaded function or remove if not needed
+// submitted = true;
 
 const swiper = new Swiper('.swiper', {
     slidesPerView: 3,
@@ -136,19 +163,18 @@ const swiper = new Swiper('.swiper', {
     }
 });
 
-
-  function showGenre(genre) {
+function showGenre(genre) {
     const wrappers = document.querySelectorAll('.big-wrapper');
     wrappers.forEach(wrapper => {
-      const genreType = wrapper.getAttribute('data-genre');
-      if (genre === 'all' || genreType === genre) {
-        wrapper.style.display="grid";
-        wrapper.classList.remove('show'); 
-        void wrapper.offsetWidth; 
-        wrapper.classList.add('show');
-      } else {
-        wrapper.classList.remove('show');
-        wrapper.style.display = 'none';
-      }
+        const genreType = wrapper.getAttribute('data-genre');
+        if (genre === 'all' || genreType === genre) {
+            wrapper.style.display = "grid";
+            wrapper.classList.remove('show');
+            void wrapper.offsetWidth;
+            wrapper.classList.add('show');
+        } else {
+            wrapper.classList.remove('show');
+            wrapper.style.display = 'none';
+        }
     });
-  }
+}
