@@ -178,3 +178,82 @@ function showGenre(genre) {
         }
     });
 }
+const books = [
+    { id: 1, title: "The Subtle Art of Not Giving A F", genre: "self-help", image: "./Pictures/book1.png", url: "book1.html" },
+    { id: 2, title: "Atomic Habits", genre: "self-help", image: "./Pictures/book2.png", url: "atomic-habits.html" },
+    { id: 3, title: "48 Laws of Power", genre: "self-help", image: "./Pictures/book33.png", url: "48-laws-of-power.html" },
+    { id: 4, title: "Mastery", genre: "self-help", image: "./Pictures/book4.png", url: "mastery.html" },
+    { id: 5, title: "The Maid", genre: "mystery", image: "./Pictures/book5.png", url: "the-maid.html" },
+    { id: 6, title: "رفقاء الليل", genre: "mystery", image: "./Pictures/book6.png", url: "night.html" },
+    { id: 7, title: "حالات نادرة", genre: "mystery", image: "./Pictures/book7.png", url: "cases.html" },
+    { id: 8, title: "يوتوبيا", genre: "mystery", image: "./Pictures/book8.png", url: "utopia.html" },
+    { id: 9, title: "This Could Be Us", genre: "romance", image: "./Pictures/book9.png", url: "this-could-be-us-1.html" },
+    { id: 10, title: "For You I'd Break", genre: "romance", image: "./Pictures/book10.png", url: "for-you-id-break.html" },
+    { id: 11, title: "Until Love Sets Us Apart", genre: "romance", image: "./Pictures/book11.png", url: "until-love-sets-us-apart.html" },
+    { id: 12, title: "Only Love Can Hurt Like This", genre: "romance", image: "./Pictures/book12.png", url: "only-love-can-hurt-like-this.html" }
+];
+
+// Get DOM elements
+const searchInput = document.querySelector('.search-input');
+const searchDropdown = document.getElementById('search-dropdown');
+const searchIcon = document.querySelector('.search-icon');
+
+// Add event listeners
+searchInput.addEventListener('input', handleSearch);
+searchIcon.addEventListener('click', () => {
+    searchInput.focus();
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.search-container')) {
+        searchDropdown.classList.remove('show');
+    }
+});
+
+// Search function
+function handleSearch() {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    // Only show dropdown if at least one character is typed
+    if (searchTerm.length > 0) {
+        const filteredBooks = books.filter(book =>
+            book.title.toLowerCase().includes(searchTerm) ||
+            book.genre.toLowerCase().includes(searchTerm)
+        );
+
+        renderSearchResults(filteredBooks);
+        searchDropdown.classList.add('show');
+    } else {
+        searchDropdown.classList.remove('show');
+    }
+}
+
+// Render search results
+function renderSearchResults(books) {
+    searchDropdown.innerHTML = '';
+
+    if (books.length === 0) {
+        searchDropdown.innerHTML = '<div class="book-item"><div class="book-info"><div class="book-title">No books found</div></div></div>';
+        return;
+    }
+
+    books.forEach(book => {
+        const bookElement = document.createElement('div');
+        bookElement.className = 'book-item';
+        bookElement.innerHTML = `
+          <img src="${book.image}" alt="${book.title}">
+          <div class="book-info">
+            <div class="book-title">${book.title}</div>
+            <div class="book-genre">${book.genre.charAt(0).toUpperCase() + book.genre.slice(1)}</div>
+          </div>
+        `;
+
+        // Add click event to navigate to book page
+        bookElement.addEventListener('click', () => {
+            window.location.href = book.url;
+        });
+
+        searchDropdown.appendChild(bookElement);
+    });
+}

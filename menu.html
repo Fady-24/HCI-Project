@@ -30,6 +30,7 @@
   </nav>
 
 
+
   <div class="filter">
     <input type="radio" class="btn-check" name="options-base" id="option5" checked onclick="showGenre('all')">
     <label class="btn" for="option5">All</label>
@@ -42,6 +43,13 @@
 
     <input type="radio" class="btn-check" name="options-base" id="option8" onclick="showGenre('romance')">
     <label class="btn" for="option8">Romance</label>
+  </div>
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search books...">
+    <i class="fas fa-search search-icon"></i>
+    <div class="search-dropdown" id="search-dropdown">
+      <!-- Results will appear here -->
+    </div>
   </div>
 
   <div id="allbooks">
